@@ -1,3 +1,4 @@
+"use client"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
@@ -40,7 +41,8 @@ export function AppLogo(){
 
 export default function SignIn() {
 
-  const methods = useForm<AuthFormData>({ resolver: zodResolver(authSchema)});
+  const methods = useForm<AuthFormData>({ resolver: zodResolver(authSchema) });
+  
   const { toast } = useToast();
 
   const onSubmit = (data: AuthFormData) =>{
